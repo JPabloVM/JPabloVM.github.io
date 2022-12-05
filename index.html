@@ -63,12 +63,10 @@
                 <div class="conhecimento">
                     <div class="conhecimento-header">
                         <i class="fab fa-html5"></i>
-                        <h3>HTML</h3>
+                        <h3>HTML5</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet magnam dolorum nulla vel
-                            reiciendis modi natus nemo? Eum esse, molestias ipsam blanditiis consectetur cumque. Maiores
-                            voluptatum dolore labore alias sit.</p>
+                        <p>Criação de sites simples e complexos</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -77,9 +75,7 @@
                         <h3>CSS</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore eaque quis fugit doloribus
-                            ratione qui accusamus quia corrupti obcaecati molestias nostrum aperiam quod aspernatur
-                            similique nemo tempora, provident temporibus animi!</p>
+                        <p>Estilização e criação de animações de páginas</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -88,9 +84,7 @@
                         <h3>Design</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque nulla ipsa, dolorem vel,
-                            consectetur aliquid doloribus excepturi provident quis harum tenetur dolore sequi hic nihil
-                            vero, ad nam quaerat inventore?</p>
+                        <p>Prototipagem de projetos, tanto mobile quanto Web</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -99,9 +93,7 @@
                         <h3>JavaScript</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est corporis, soluta odio earum quo
-                            iste iusto dolorum dolores aspernatur minus velit quia exercitationem nobis delectus odit
-                            officiis reiciendis assumenda. Iste.</p>
+                        <p>Criação de Scripts, comandos , funcionalidades para sites</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -110,9 +102,7 @@
                         <h3>Bootstrap</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem maxime asperiores
-                            dignissimos vitae. Accusamus ducimus id veniam obcaecati eveniet tempora tenetur praesentium
-                            non! Quaerat, quidem voluptatum? Voluptate, temporibus aperiam?</p>
+                        <p>Utilização de estruturas para sites</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -121,17 +111,66 @@
                         <h3>Git e GitHub</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus optio nostrum dolores.
-                            Corporis neque iure facilis, reprehenderit ipsam repellat totam eligendi eos, repudiandae
-                            voluptates repellendus. Perspiciatis blanditiis necessitatibus consequuntur quia!</p>
+                        <p>Versionamento de códigos de projetos.</p>
                     </div>
                 </div>
                 <div class="conhecimentos-img-wrapper">
                     <img src="imagens/conhecimentos.png" alt="imagem conhecimentos">
                 </div>
             </div>
-            
+
         </section>
+
+        <section class="sessao-contato">
+            <div class="contato-wrapper">
+                <div class="contato-left"></div>
+                <div class="contato-right">
+                    <h1>Contato</h1>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="field" id="nome"><label for="nome"
+                                class="field-label">Nome</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="field" id="email"><label for="email"
+                                class="field-label">E-mail</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea class="field" id="mensagem"></textarea><label for="mensagem"
+                                class="field-label">Mensagem</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="sessao-orcamento">
+            <div class="orcamento-wrapper">
+                <h1>Faça um orçamento</h1>
+                <form>
+                    <label for="qtde">Quantidade de Páginas</label>
+                    <input type="number" min="1" name="qtde" id="qtde">
+                    <label for="js">Preciso de um script JS</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-sim">
+                            <label for="layout-nao">Preciso de um Layout</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="layout" id="layout-nao">
+                            <label for="layout-nao">Já tenho um Layout</label>
+                        </div>
+                    </div>
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
+                    <label id="preco">R$0.00</label>
+                    <button class="btn btn-orcamento" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
     </div>
 
 </body>
