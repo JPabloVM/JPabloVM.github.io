@@ -18,6 +18,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.container {
+    width: 100% !important;
+}
+
 .hamburguer {
     /*background-color: red;*/
     width: 2rem;
@@ -47,8 +51,8 @@ html {
 .hamburguer span {
     position: absolute;
     left: 3rem;
-    height: 2rem;
     width: 6rem;
+    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,46 +237,66 @@ header {
     color: #000;
 }
 
-.conhecimentos {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(6, 6rem);
-    row-gap: .5rem;
+/*  */
+
+/* Estilos para telas menores que 768 pixels */
+@media only screen and (max-width: 768px) {
+
+    .conhecimento {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    .conhecimento p:last-child {
+        padding-bottom: 3rem;
+    }
+
 }
 
-.conhecimento:nth-child(1) {
-    grid-column: 4/7;
-    grid-row: 1/3;
-}
+@media only screen and (min-width: 768px) {
+    .conhecimentos {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(6, 6rem);
+        row-gap: .5rem;
+    }
 
-.conhecimento:nth-child(2) {
-    grid-column: 3/6;
-    grid-row: 3/5;
-}
+    .conhecimento:nth-child(1) {
+        grid-column: 4/7;
+        grid-row: 1/3;
+    }
 
-.conhecimento:nth-child(3) {
-    grid-column: 4/7;
-    grid-row: 5/-1;
-}
+    .conhecimento:nth-child(2) {
+        grid-column: 3/6;
+        grid-row: 3/5;
+    }
 
-.conhecimento:nth-child(4) {
-    grid-column: 11/14;
-    grid-row: 1/3;
-}
+    .conhecimento:nth-child(3) {
+        grid-column: 4/7;
+        grid-row: 5/-1;
+    }
 
-.conhecimento:nth-child(5) {
-    grid-column: 12/15;
-    grid-row: 3/5;
-}
+    .conhecimento:nth-child(4) {
+        grid-column: 11/14;
+        grid-row: 1/3;
+    }
 
-.conhecimento:nth-child(6) {
-    grid-column: 11/14;
-    grid-row: 5/-1;
+    .conhecimento:nth-child(5) {
+        grid-column: 12/15;
+        grid-row: 3/5;
+    }
+
+    .conhecimento:nth-child(6) {
+        grid-column: 11/14;
+        grid-row: 5/-1;
+    }
 }
 
 .sessao-conhecimentos {
     background-color: #f5f5f5;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sessao-header {
@@ -311,15 +335,23 @@ header {
     margin-top: 1rem;
 }
 
-.conhecimentos-img-wrapper {
-    grid-column: 7/11;
-    grid-row: 2/6;
-    width: 100%;
+@media only screen and (max-width: 768px) {
+    .conhecimentos-img-wrapper {
+        display: none;
+    }
 }
 
-.conhecimentos-img-wrapper img {
-    object-fit: cover;
-    width: 100%;
+@media only screen and (min-width: 768px) {
+    .conhecimentos-img-wrapper {
+        grid-column: 7/11;
+        grid-row: 2/6;
+        width: 100%;
+    }
+
+    .conhecimentos-img-wrapper img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .sessao-contato {
@@ -340,18 +372,30 @@ header {
 }
 
 .contato-wrapper {
-    width: 60%;
+    width: 80%;
     height: 30rem;
     display: flex;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
 }
 
-.contato-left {
-    width: 35%;
-    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
-        url(https://raw.githubusercontent.com/joaocarloslima/portifolio/master/imagens/contato.jpg);
-    background-size: cover;
+@media screen and (max-width:768px) {
+    .contato-left{
+        display: none;
+    }
+    .contato-wrapper{
+        margin-right: 3rem;
+    }
 }
+
+@media screen and (min-width: 768px) {
+    .contato-left {
+        width: 35%;
+        background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+            url(https://raw.githubusercontent.com/joaocarloslima/portifolio/master/imagens/contato.jpg);
+        background-size: cover;
+    }
+}
+
 
 .contato-right {
     width: 65%;
@@ -438,8 +482,7 @@ header {
 }
 
 .orcamento-wrapper {
-    min-width: 650px;
-    width: 40%;
+    width: 90%;
     height: 70%;
     background-color: #ffffff88;
     border-radius: 10px;
@@ -452,14 +495,14 @@ header {
 
 .orcamento-wrapper h1 {
     position: absolute;
-    top: -6rem;
+    top: -4rem;
     background: #6a3093;
     background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
     background: linear-gradient(to left, #a044ff, #6a3093);
     padding: 0 3rem;
     color: #fff;
     font-family: var(--font-primary);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: lighter;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -476,6 +519,8 @@ header {
     font-family: var(--font-secundary);
     font-size: 1.5rem;
     font-weight: bold;
+    margin-left: .1rem;
+    
 }
 
 .orcamento-wrapper input[type="number"] {
@@ -500,53 +545,54 @@ header {
 
 /*Inicio do footer*/
 
-footer{
+footer {
     width: 100%;
     height: 8rem;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .footer-content{
-    width: 40%;
+}
+
+.footer-content {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .footer-content p{
-      font-family: var(--font-secundary);
-      color: #a7a7a7;
-      font-size: 1.2rem;
-    }
-    
-  .social-list a{
-      margin: 0 2rem;
-      color: #a7a7a7;
-    font-size: 1.3rem;
-  }
-  
-  .social-list ul {
-    display: flex;
-  }
+}
 
-  /*Fim do footer*/
-  
-      #link-topo {
-          position: fixed;
-          right: 3rem;
-          bottom: 3rem;
-          width: 3rem;
-          height: 3rem;
-          background: #6a3093;
-          background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
-          background: linear-gradient(to left, #a044ff, #6a3093);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #fff;
-          border-radius: .3rem;
-          box-shadow: 0 0.1rem 0.6rem #00000009;
-      }
-  
+.footer-content p {
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a {
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul {
+    display: flex;
+}
+
+/*Fim do footer*/
+
+#link-topo {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 2rem;
+    height: 2rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to left, #a044ff, #6a3093);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.6rem #00000009;
+}
