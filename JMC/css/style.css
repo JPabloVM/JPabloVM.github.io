@@ -7,6 +7,8 @@
 
     --color-primary: #4682B4;
     --color-action: #4169E1;
+
+    --font-color: #fff;
 }
 
 * {
@@ -18,6 +20,7 @@
 
 .navbar {
     background-color: var(--color-primary) !important;
+    transition: 2s;
 }
 
 .navbar-brand {
@@ -85,14 +88,17 @@
     font-weight: bold;
 }
 
-.card-text {
+.card-text, .info-text {
     font-family: var(--font-secondary--);
 }
 
 .btn-primary {
     background-color: var(--color-action) !important;
+    border-color: var(--color-action) !important;
     font-family: var(--font-action--);
     font-weight: 500;
+    color: var(--font-color);
+    transition: 2s;
 }
 .orcamentos{
     margin-top: 5px;
