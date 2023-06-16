@@ -55,7 +55,7 @@ function alteraCor(numeroGerado) {
 }
 
 function escolherNumero() {
-    var numeroAleatorio = Math.floor(Math.random() * 4) + 1;
+    var numeroAleatorio = Math.floor(Math.random() * 6) + 1;
     alteraCor(numeroAleatorio);
 }
 setInterval(escolherNumero, 30000);
