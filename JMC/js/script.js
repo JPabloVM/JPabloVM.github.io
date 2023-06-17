@@ -58,4 +58,4 @@ function escolherNumero() {
     var numeroAleatorio = Math.floor(Math.random() * 6) + 1;
     alteraCor(numeroAleatorio);
 }
-setInterval(escolherNumero, 30000);
+setInterval(escolherNumero, 10000);
